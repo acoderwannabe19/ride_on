@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Update Employee </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <!-- <div class="form-group">
+                        <label> Number</label>
+                        <input type="text" class="form-control" id="number" [(ngModel)]="commande.numero"
+                            name="number">
+                    </div> -->
+<!--                     
+                    <div class="form-group">
+                        <label> Order date</label>
+                        <input type="date" class="form-control" id="orderDate" [(ngModel)]="commande.dateCommande"
+                            name="orderDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Delivery date </label>
+                        <input type="date" class="form-control" id="deliveryDate" [(ngModel)]="commande.dateLivraison"
+                            name="deliveryDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Wanted delivery date </label>
+                        <input type="date" class="form-control" id="wantedDeliveryDate" [(ngModel)]="commande.dateLivraisonVoulue"
+                            name="wantedDeliveryDate">
+                    </div> -->
+
+                    <mat-form-field>
+                      <input  matInput [(ngModel)]="commande.dateCommande" (dateChange)="onDateCommandeChange($event)" id="orderDate" [matDatepicker]="orderPicker" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="orderPicker"></mat-datepicker-toggle>
+                      <mat-datepicker #orderPicker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="commande.dateLivraison" (dateChange)="onDateLivraisonChange($event)" id="deliveryDate" [matDatepicker]="deliveryPicker" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="deliveryPicker"></mat-datepicker-toggle>
+                      <mat-datepicker #deliveryPicker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="commande.dateLivraisonVoulue" (dateChange)="onDateLivraisonVoulueChange($event)" id="WantedDeliveryDate" [matDatepicker]="wantedDeliveryPicker" placeholder="Choose a date">
+                      <mat-datepicker-toggle matSuffix [for]="wantedDeliveryPicker"></mat-datepicker-toggle>
+                      <mat-datepicker #wantedDeliveryPicker></mat-datepicker>
+                    </mat-form-field>
+                
+                    
+                    <div class="form-group">
+                        <label> Status</label>
+                        <input type="text" class="form-control" id="status" [(ngModel)]="commande.statut"
+                            name="status">
+                    </div>
+                    
+
+                    <div class="form-group"> 
+                        <label> Client</label>
+                        <select class="form-select"  #client (change)="onClientChange(client.value)">
+                          <option  *ngFor="let client of clients" name="client" [value]="client.id" [selected]="client.id == commande.clientId.id">
+                             {{ client.prenom }} {{ client.nom }} </option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label> Store</label>
+                        <select  class="form-select" #magasin (change)="onMagasinChange(magasin.value)">
+                          <option *ngFor="let store of magasins" name="magasin" [value]="store.id"  [selected]="store.id == commande.magasinId.id">
+                            {{ store.nom }}
+                          </option>
+                        </select>
+                      </div>
+
+                      <div class="form-group"> 
+                        <label> Seller</label>
+                        <select class="form-select"  #vendeur (change)="onSellerChange(vendeur.value)">
+                          <option  *ngFor="let vendeur of employes" name="vendeur" [value]="vendeur.id" [selected]="vendeur.id == commande.vendeurId.id">
+                             {{ vendeur.prenom }} {{ vendeur.nom }} </option>
+                        </select>
+                      </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class = "row">
+    <h2> Employee List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+      <button (click)="ajoutArticleCommande()" class = "btn btn-primary"> Add an order</button>
+
+        <tr>
+            <th> Order number</th>
+            <th> Line </th>
+            <th> Price </th>
+            <th> Quantity </th>
+            <th> Discount </th>
+            <th> Product </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let articleCommande of articlesCommande" >
+            <td> {{ articleCommande.numeroCommande.numero }} </td>
+            <td>{{ articleCommande.ligne }}</td>
+            <td> {{ articleCommande.prixDepart }} </td>
+            <td>{{ articleCommande.quantite }}</td>
+            <td>{{ articleCommande.remise }}</td>
+            <td> {{ articleCommande.produitId.nom }} </td>
+            <td>
+                <button (click)="updateArticleCommande(articleCommande.ligne, articleCommande.numeroCommande.numero)"  class = "btn btn-primary"> Update</button>
+                <button (click)="deleteArticleCommande(articleCommande.ligne, articleCommande.numeroCommande.numero)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <!-- <button class = "btn btn-primary" style="margin-left: 10px"> View</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>

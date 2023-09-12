@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Update artcicle articleCommande </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                      <div class="form-group">
+                        <label> Quantity</label>
+                        <input type="text" class="form-control" id="quantity" [(ngModel)]="articleCommande.quantite"
+                            name="quantity">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label> Price</label>
+                        <input type="text" class="form-control" id="status" [(ngModel)]="articleCommande.prixDepart"
+                            name="status">
+                    </div>
+                    
+
+            
+                    <div class="form-group">
+                    <label> Product </label>
+                    <select  class="form-select" #produit (change)="onProduitChange(produit.value)">
+                        <option *ngFor="let store of produits" name="produit" [value]="store.id"  [selected]="store.id == articleCommande.produitId.id">
+                        {{ store.nom }}
+                        </option>
+                    </select>
+                    </div>
+
+                
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

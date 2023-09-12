@@ -1,0 +1,24 @@
+<div class = "row">
+    <h2> Brand List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+      <button (click)="ajoutCategorie()" class = "btn btn-primary"> Add a brand</button>
+
+        <tr>
+            <th>Name</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let categorie of categories" >
+            <td> {{ categorie.nom }} </td>
+            <td>
+                <button (click)="updateCategorie(categorie.id)"  class = "btn btn-primary"> Update</button>
+                <button (click)="deleteCategorie(categorie.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <!-- <button class = "btn btn-primary" style="margin-left: 10px"> View</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>

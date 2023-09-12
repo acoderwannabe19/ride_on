@@ -1,0 +1,36 @@
+<div class = "row">
+    <h2> Employee List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+      <button (click)="ajoutMagasin()" class = "btn btn-primary"> Add a person</button>
+
+        <tr>
+            <th> Name</th>
+            <th> Email </th>
+            <th> Phone </th>
+            <th> Address </th>
+            <th> Zip code </th>
+            <th> State </th>
+            <th> City </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let magasin of magasins" >
+            <td> {{ magasin.nom }} </td>
+            <td> {{ magasin.email }} </td>
+            <td> {{ magasin.telephone }} </td>
+            <td> {{ magasin.adresse }} </td>
+            <td> {{ magasin.codeZip }} </td>
+            <td> {{ magasin.etat }} </td>
+            <td> {{ magasin.ville }} </td>
+            <td>
+                <button (click)="updateMagasin(magasin.id)"  class = "btn btn-primary"> Update</button>
+                <button (click)="deleteMagasin(magasin.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <!-- <button class = "btn btn-primary" style="margin-left: 10px"> View</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
