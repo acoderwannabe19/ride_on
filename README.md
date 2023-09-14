@@ -6,6 +6,8 @@ Welcome to _Ride On_, your one-stop destination for all your bicycle and bike ne
 
 ![_Ride On_](ride_on_home.png)
 
+![_Ride On_](ride_on_form.png)
+
 ## Table of Contents
 
 - [Introduction](#introduction)

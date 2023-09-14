@@ -1,58 +1,134 @@
-<div class="row">
+<div style="position: relative;" class="site-navbar-wrap row">
+    <div class="col-7">
+      <a style="text-decoration: none; margin-right: 20px;" href="">
+        <ion-icon name="mail-outline"></ion-icon> rideon@domain.com    
+      </a>
+      <ion-icon name="call-outline"></ion-icon> +221 33 123 45 67
+    </div>
+    <div style="position: relative;" class="col-5">
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-twitter"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-instagram"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-facebook"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-whatsapp"></ion-icon>
+      </a>
+    </div>
+      <hr >
+  </div>
+  <nav class="navbar navbar-expand-lg  ">
+      <a class="navbar-brand" href="#">Ride On</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="produits"><ion-icon name="pricetags-outline"></ion-icon> Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <ion-icon name="people-outline"></ion-icon> Skateholders
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="clients">Clients</a>
+              <a class="dropdown-item" href="employes">Employees</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="personnes">People</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="commandes"><ion-icon name="cart-outline"></ion-icon> Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="articlesCommandes"> <ion-icon name="bag-outline"></ion-icon> Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stocks"><ion-icon name="cube-outline"></ion-icon> Stocks</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="marques"><ion-icon name="star-outline"></ion-icon> Brands</a>
+              <a class="dropdown-item" href="categories"><ion-icon name="copy-outline"></ion-icon> Categories</a>
+              <a class="dropdown-item" href="magasins"><ion-icon name="cube-outline"></ion-icon> Stores</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  
+<div style="margin-top: 25px; position: relative; box-shadow: 290px rgba(0,0,0,0.2);"  class="row">
     <div class="card col-md-6 offset-md-3 offset-md-3">
         <div class="row">
-            <h3 class="text-center"> Update Employee </h3>
+            <h3 style="font-weight: bold;padding: 10px;" class="text-center"> Add an employee </h3>
             <hr />
-            <div class="card-body">
-                <form (ngSubmit)="onSubmit()">
+            <div style="text-align: left; position: relative;" class="card-body ">
+                <form style="position: relative;" (ngSubmit)="onSubmit()">
 
-                    <div class="form-group">
-                        <label> First Name</label>
-                        <input type="text" class="form-control" id="firstName" [(ngModel)]="employe.prenom"
-                            name="firstName">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group">
+                            <label> First Name</label>
+                            <input type="text" class="form-control" id="firstName" [(ngModel)]="employe.prenom"
+                                name="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label> Last Name</label>
+                            <input type="text" class="form-control" id="lastName" [(ngModel)]="employe.nom"
+                                name="lastName">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group">
+                            <label> Email Id</label>
+                            <input type="text" class="form-control" id="emailId" [(ngModel)]="employe.email"
+                                name="emailId">
+                        </div>
+                        <div class="form-group">
+                            <label> Phone</label>
+                            <input type="text" class="form-control" id="phone" [(ngModel)]="employe.telephone"
+                                name="phone">
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="form-group">
-                        <label> Last Name</label>
-                        <input type="text" class="form-control" id="lastName" [(ngModel)]="employe.nom"
-                            name="lastName">
-                    </div>
-
-                    <div class="form-group">
-                        <label> Email Id</label>
-                        <input type="text" class="form-control" id="emailId" [(ngModel)]="employe.email"
-                            name="emailId">
-                    </div>
-
-                    
-                    <div class="form-group">
-                        <label> Phone</label>
-                        <input type="text" class="form-control" id="phone" [(ngModel)]="employe.telephone"
-                            name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label> Address</label>
-                        <input type="text" class="form-control" id="address" [(ngModel)]="employe.adresse"
-                            name="address">
-                    </div>
-
-                    <div class="form-group">
-                        <label> City</label>
-                        <input type="text" class="form-control" id="city" [(ngModel)]="employe.ville"
-                            name="city">
-                    </div>
-
-                    <div class="form-group">
-                        <label> State</label>
-                        <input type="text" class="form-control" id="state" [(ngModel)]="employe.etat"
-                            name="state">
-                    </div>
-
-                    <div class="form-group">
-                        <label> Zip code</label>
-                        <input type="text" class="form-control" id="code" [(ngModel)]="employe.codeZip"
-                            name="code">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group">
+                            <label> Address</label>
+                            <input type="text" class="form-control" id="address" [(ngModel)]="employe.adresse"
+                                name="address">
+                        </div>
+                        <div class="form-group">
+                            <label> City</label>
+                            <input type="text" class="form-control" id="city" [(ngModel)]="employe.ville"
+                                name="city">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group">
+                            <label> State</label>
+                            <input type="text" class="form-control" id="state" [(ngModel)]="employe.etat"
+                                name="state">
+                        </div>
+                        <div class="form-group">
+                            <label> Zip code</label>
+                            <input type="text" class="form-control" id="code" [(ngModel)]="employe.codeZip"
+                                name="code">
+                        </div>
+                      </div>
                     </div>
 
                     <div class="form-group">
@@ -61,28 +137,30 @@
                             name="active">
                     </div>
 
-                    <div class="form-group"> 
-                        <label> Manager</label>
-                        <select class="form-select"  #manager (change)="onManagerChange(manager.value)">
-                          <option  *ngFor="let manager of employes" name="manager" [value]="manager.id" [selected]="manager.id == employe.managerId?.id">
-                             {{ manager.prenom }} {{ manager.nom }} </option>
-                        </select>
-                      </div>
-
-                      <div class="form-group">
-                        <label> Store</label>
-                        <select  class="form-select" #magasin (change)="onMagasinChange(magasin.value)">
-                          <option *ngFor="let store of magasins" name="magasin" [value]="store.id"  [selected]="store.id == employe.magasinId.id">
-                            {{ store.nom }}
-                          </option>
-                        </select>
-                      </div>
+                    <div class="row">
+                      <div class="form-group col-6">
+                          <label> Manager</label>
+                          <select class="form-select"  #manager (change)="onManagerChange(manager.value)">
+                            <option  *ngFor="let manager of employes" name="manager" [value]="manager.id" [selected]="manager.id == employe.managerId?.id">
+                               {{ manager.prenom }} {{ manager.nom }} </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-6">
+                          <label> Store</label>
+                          <select  class="form-select" #magasin (change)="onMagasinChange(magasin.value)">
+                            <option *ngFor="let store of magasins" name="magasin" [value]="store.id"  [selected]="store.id == employe.magasinId.id">
+                              {{ store.nom }}
+                            </option>
+                          </select>
+                        </div>
+                    </div>
 
                     <br />
-                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="btn btn-outline-success" type="submit">Submit</button>
 
                 </form>
             </div>
         </div>
     </div>
 </div>
+  <img id="gif" src="/assets/images/201338-cycling-at-east-coast-park.jpg" />

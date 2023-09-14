@@ -1,0 +1,79 @@
+#gif {
+    width: 100%;
+    margin-top: -800px;
+}
+
+.row {
+    font-family: QuicksandRegular;
+}
+
+.text-center {
+    font-family: QuicksandRegular;
+}
+
+nav {
+    background-color: transparent;
+    color: white;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin-right: 5px;
+    font-family: QuicksandRegular;
+}
+
+nav a:hover {
+    color: #084a48;
+}
+
+.site-navbar-wrap {
+    background-color: transparent;
+    position: relative;
+    color: #fff;
+    margin-top: 10px;
+    font-family: QuicksandRegular;
+    width: 100%;
+}
+
+.site-navbar-wrap a {
+    color: #fff; }
+
+.site-navbar-wrap a:hover {
+    color: #084a48;
+}
+    
+.site-navbar-wrap .site-navbar-top {
+    font-size: 0.8rem; }
+
+#navbarSupportedContent {
+    margin-left: 38%;
+}
+
+.navbar-toggler {
+    border: 0px;
+    color: #fff;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+    font-size: 14px;
+
+}
+
+.dropdown-menu {
+    border: 1px solid rgb(0, 181, 181);
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: QuicksandBold;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+
+.form-group {
+    padding: 10px;
+}
