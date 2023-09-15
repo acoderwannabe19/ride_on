@@ -1,9 +1,82 @@
-<div class="row">
+<div style="position: relative;" class="site-navbar-wrap row">
+    <div class="col-7">
+      <a style="text-decoration: none; margin-right: 20px;" href="">
+        <ion-icon name="mail-outline"></ion-icon> rideon@domain.com    
+      </a>
+      <ion-icon name="call-outline"></ion-icon> +221 33 123 45 67
+    </div>
+    <div style="position: relative;" class="col-5">
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-twitter"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-instagram"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-facebook"></ion-icon>
+      </a>
+      <a href="">
+        <ion-icon style="margin-right: 15px;" name="logo-whatsapp"></ion-icon>
+      </a>
+    </div>
+      <hr >
+  </div>
+  <nav class="navbar navbar-expand-lg  ">
+      <a class="navbar-brand" href="#">Ride On</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="produits"><ion-icon name="pricetags-outline"></ion-icon> Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <ion-icon name="people-outline"></ion-icon> Skateholders
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="clients">Clients</a>
+              <a class="dropdown-item" href="employes">Employees</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="personnes">People</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="commandes"><ion-icon name="cart-outline"></ion-icon> Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="articlesCommandes"> <ion-icon name="bag-outline"></ion-icon> Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stocks"><ion-icon name="cube-outline"></ion-icon> Stocks</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="marques"><ion-icon name="star-outline"></ion-icon> Brands</a>
+              <a class="dropdown-item" href="categories"><ion-icon name="copy-outline"></ion-icon> Categories</a>
+              <a class="dropdown-item" href="magasins"><ion-icon name="cube-outline"></ion-icon> Stores</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  
+
+  <img id="gif" src="/assets/images/201338-cycling-at-east-coast-park.jpg" />
+  <div id="formp" class="row">
     <div class="card col-md-6 offset-md-3 offset-md-3">
         <div class="row">
-            <h3 class="text-center"> Update Employee </h3>
-            <hr />
-            <div class="card-body">
+          <h3 style="font-weight: bold;padding: 10px;" class="text-center"> Update the employee </h3>
+          <hr />
+          <div style="text-align: left; position: relative;" class="card-body">
                 <form (ngSubmit)="onSubmit()">
 
                     <div class="form-group">
@@ -79,7 +152,7 @@
                       </div>
 
                     <br />
-                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="btn btn-outline-success" type="submit">Submit</button>
 
                 </form>
             </div>

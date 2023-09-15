@@ -70,31 +70,32 @@
   </nav>
   
   <button  (click)="ajoutProduit()" style="position: relative; margin: 20px;" class = "btn btn-light"><ion-icon name="add-outline"></ion-icon> Add a product</button>
-  
-<table class = "table table-striped table-bordered">
-  <thead>
-      <tr>
-          <th> Name </th>
-          <th> Year </th>
-          <th> Price </th>
-          <th> Category </th>
-          <th> Brand </th>
-          <th> Actions </th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor = "let produit of produits" >
-          <td> {{ produit.nom }} </td>
-          <td> {{ produit.anneeModel }} </td>
-          <td> {{ produit.prixDepart }} </td>
-          <td> {{ produit.categorieId.nom }} </td>
-          <td>{{ produit.marqueId.nom }}</td>
-          <td>
-              <button (click)="updateProduit(produit.id)"  class = "btn btn-outline-success"> Update</button>
-              <button (click)="deleteProduit(produit.id)" class = "btn btn-outline-danger"> Delete</button>
-          </td>
-      </tr>
-  </tbody>
-</table>
+
+
   <img id="gif" src="/assets/images/201338-cycling-at-east-coast-park.jpg" />
+  <table  class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Year </th>
+            <th> Price </th>
+            <th> Category </th>
+            <th> Brand </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let produit of produits" >
+            <td> {{ produit.nom }} </td>
+            <td> {{ produit.anneeModel }} </td>
+            <td> {{ produit.prixDepart }} </td>
+            <td> {{ produit.categorieId.nom }} </td>
+            <td>{{ produit.marqueId.nom }}</td>
+            <td>
+                <button (click)="updateProduit(produit.id)"  class = "btn btn-outline-success"> Update</button>
+                <button (click)="deleteProduit(produit.id)" class = "btn btn-outline-danger"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
 

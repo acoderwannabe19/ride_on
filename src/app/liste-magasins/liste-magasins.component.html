@@ -71,34 +71,34 @@
 
   <button  (click)="ajoutMagasin()" style="position: relative; margin: 20px;" class = "btn btn-light"><ion-icon name="add-outline"></ion-icon> Add a store</button>
   
-<table class = "table table-striped table-bordered">
-  <thead>
-      <tr>
-          <th> Name</th>
-          <th> Email </th>
-          <th> Phone </th>
-          <th> Address </th>
-          <th> Zip code </th>
-          <th> State </th>
-          <th> City </th>
-          <th> Actions </th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor = "let magasin of magasins" >
-          <td> {{ magasin.nom }} </td>
-          <td> {{ magasin.email }} </td>
-          <td> {{ magasin.telephone }} </td>
-          <td> {{ magasin.adresse }} </td>
-          <td> {{ magasin.codeZip }} </td>
-          <td> {{ magasin.etat }} </td>
-          <td> {{ magasin.ville }} </td>
-          <td>
-              <button (click)="updateMagasin(magasin.id)"  class = "btn btn-outline-success"> Update</button>
-              <button (click)="deleteMagasin(magasin.id)" class = "btn btn-outline-danger"> Delete</button>
-          </td>
-      </tr>
-  </tbody>
-</table>
 
   <img id="gif" src="/assets/images/201338-cycling-at-east-coast-park.jpg" />
+  <table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Email </th>
+            <th> Phone </th>
+            <th> Address </th>
+            <th> Zip code </th>
+            <th> State </th>
+            <th> City </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let magasin of magasins" >
+            <td> {{ magasin.nom }} </td>
+            <td> {{ magasin.email }} </td>
+            <td> {{ magasin.telephone }} </td>
+            <td> {{ magasin.adresse }} </td>
+            <td> {{ magasin.codeZip }} </td>
+            <td> {{ magasin.etat }} </td>
+            <td> {{ magasin.ville }} </td>
+            <td>
+                <button (click)="updateMagasin(magasin.id)"  class = "btn btn-outline-success"> Update</button>
+                <button (click)="deleteMagasin(magasin.id)" class = "btn btn-outline-danger"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
